@@ -12,7 +12,9 @@ export class QuoteComponent implements OnInit {
     new Quote (2,"Simon kimani", "Get ready for change",0,0),
     new Quote (3,"Kelvin Mbugua","Change is inevitable",0,0),
   ];
-
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit() {
